@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HTML & CSS opdracht</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__text-box">
+        <h1 class="header__title">mijn oefening</h1>
+        <nav class="header__navigation">
+            <a href="#" class="header__navigation-item">Quote</a>
+            <a href="#about" class="header__navigation-item">Over mij</a>
+            <a href="#favorites" class="header__navigation-item">Favorieten</a>
+        </nav> <!-- Items could be part of an unordered list, but avoided here to minimize the lines of code -->
+        </div>
+    </header>
+    <main class="main">
+        <section class="quote">
+            <div class="quote__text-box">
+               <figure class="quote__block">
+                    <h2 class="quote__title sr-only">Quote</h2>
+                    <!-- .sr-only: accessible for screenreaders, but nog visible in the browser -->
+                    <blockquote class="quote__text">
+                       In mijn ervaring komt versie 1.0 na 4.17.22.
+                    </blockquote>
+                    <figcaption class="quote__source">
+                       &mdash; Christian Marginet
+                    </figcaption>
+               </figure> 
+            </div>        
+        </section>
+        <section class="about" id="about">
+            <div class="about__container">                
+                <h2 class="about__title">Over mij</h2>
+                <div class="profile-card">
+                    
+                    <div class="profile-card__photo">
+                        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGuVGNRiGlP9g/profile-displayphoto-shrink_200_200/0/1517677827977?e=1626912000&v=beta&t=KV27XXYjvg4dVhzBdBcmOlHTPH4i_fzJWfDfgmelxCA" alt="profielfoto" class="profile-card__image">
+                    </div>
+                    <h5 class="profile-card__name">Christian Marginet</h5>
+                    <span class="profile-card__title">Front-end developer</span>
+                    <p class="profile-card__comment">Ontwikkelen van digitaal comfort voor mens en computer 👁  💻  </p>
+                    
+                </div>    
+            </div>
+
+        </section>
+        <section class="favorites" id="favorites">
+            <div class="favorites__container">
+                <h2 class="favorites__title">Favorieten</h2>
+                <ul class="favorites__items">
+
+                    <li class="favorites__item favorites__item--strawberry">
+                        <div class="favorites__item-name">Aardbei</div>
+                    </li>
+                    
+                    <li class="favorites__item favorites__item--banana">
+                        <div class="favorites__item-name">Banaan</div>
+                    </li>
+                    
+                    <li class="favorites__item favorites__item--cherry">
+                        <div class="favorites__item-name">Kers</div>
+                    </li>
+                    
+                    <li class="favorites__item favorites__item--mandarin">
+                        <div class="favorites__item-name">Clementine</div>
+                    </li>
+                    
+                    <li class="favorites__item favorites__item--pineapple">
+                        <div class="favorites__item-name">Ananas</div>
+                    </li>
+                    
+                    <li class="favorites__item favorites__item--peach">
+                        <div class="favorites__item-name">Perzik</div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text"> Opdracht HTML & CSS | front-end developper 1 - avondonderwijs | Christian Marginet </p>
+        
+    </footer>
+</body>
+</html>
+<!-- On https://validator.w3.org/#validate_by_input: "Document checking completed. No errors or warnings to show."-->
