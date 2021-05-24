@@ -3,12 +3,9 @@
   /* base values such as colors, ... */
   --color-background-ecru: hsl(52, 50%, 96%);
   --color-background-white: hsl(0,0%,100%);
-  --color-font-grey: hsl(213,69%,10%); }
-
-* {
-  /* reset browser values */
-  margin: 0;
-  padding: 0; }
+  --color-font-grey: hsl(213,69%,10%);
+  --shadow: 0 1px 1px rgba(0, 0, 0, 0.05), 0 2px 2px rgba(0, 0, 0, 0.05), 0 4px 4px rgba(0, 0, 0, 0.05), 0 8px 8px rgba(0, 0, 0, 0.05), 0 16px 16px rgba(0, 0, 0, 0.05);
+  --max-width: 1200px; }
 
 *,
 *::before,
@@ -43,10 +40,10 @@ body {
   justify-content: center;
   top: 0;
   background-color: var(--color-background-white);
-  box-shadow: 0 1.6rem 1.6rem rgba(0, 0, 0, 0.05); }
+  box-shadow: var(--shadow); }
   .header__text-box {
     width: 100%;
-    max-width: 120rem;
+    max-width: var(--max-width);
     display: flex;
     justify-content: space-between;
     align-items: flex-end; }
@@ -68,14 +65,14 @@ body {
   background-color: black;
   display: flex; }
   .quote__text-box {
-    background-image: url("https://images.unsplash.com/photo-1530543787849-128d94430c6b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-image: url("../img/Background_quote.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100%;
     width: 100%; }
   .quote__block {
-    max-width: 120rem;
+    max-width: var(--max-width);
     margin: 0 auto;
     height: 100%;
     display: flex;
@@ -86,7 +83,8 @@ body {
     text-align: right; }
   .quote__text {
     font-weight: 600;
-    font-size: 5.2rem; }
+    font-size: 4.5em;
+    line-height: 1.3em; }
   .quote__source {
     font-size: 1.8rem;
     font-weight: 200;
@@ -98,21 +96,21 @@ body {
   display: flex;
   justify-content: center; }
   .about__container {
-    width: 120rem;
+    width: var(--max-width);
     margin: 6.4rem;
     border-radius: 1.5em;
-    background-image: linear-gradient(210deg, rgba(255, 56, 38, 0.7), rgba(201, 201, 5, 0.5) 50%, rgba(255, 255, 255, 0) 50%), url("https://images.unsplash.com/photo-1484553255294-313b931acd27?ixid=MXwxMjA3fDB8M%20HxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=%2080");
+    background-image: linear-gradient(209.5deg, rgba(255, 56, 38, 0.7), rgba(201, 201, 5, 0.5) 50%, rgba(255, 255, 255, 0) 50%), url("../img/Background_about.jpeg");
     background-repeat: no-repeat;
     background-position: 50% 46%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 1.6rem 1.6rem rgba(0, 0, 0, 0.05); }
+    box-shadow: var(--shadow); }
   .about__title {
     font-size: 4.8rem;
     font-weight: 600;
-    padding: 4.8rem 0 1.6rem 0; }
+    padding: 4.8rem 0 4.8rem 0; }
 
 .profile-card {
   width: 30rem;
@@ -124,11 +122,11 @@ body {
   overflow: hidden;
   position: relative;
   margin-bottom: 4.8rem;
-  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.05); }
+  box-shadow: var(--shadow); }
   .profile-card::before {
     content: "";
     top: 2rem;
-    background-color: #e6d5b3;
+    background-color: #eebf79;
     background-position: top center;
     width: 1.6rem;
     height: 1.6rem;
@@ -146,7 +144,7 @@ body {
   .profile-card__title {
     font-size: 1.6rem;
     text-transform: uppercase;
-    padding: 0.8rem 0rem 0.8rem 0rem;
+    padding: 0.8rem 0rem;
     border-top: .1rem dashed black;
     border-bottom: .1rem dashed black; }
   .profile-card__comment {
@@ -168,11 +166,11 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 1.6rem 1.6rem rgba(0, 0, 0, 0.05); }
+    box-shadow: var(--shadow); }
   .favorites__title {
     font-size: 4.8rem;
     font-weight: 600;
-    padding: 4.8rem 0 4.8rem 0; }
+    padding: 4.8rem 0; }
   .favorites__items {
     display: flex;
     justify-content: center;
@@ -185,7 +183,7 @@ body {
     margin: 0.8rem;
     background-size: cover;
     background-position: 50%;
-    box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow);
     display: flex;
     justify-content: center;
     align-items: flex-end; }
@@ -199,30 +197,33 @@ body {
     padding: 1.6rem;
     border-radius: 0 0 2rem 2rem; }
   .favorites__item--strawberry {
-    background-image: url("https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXR8ZW58MHwxfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"); }
+    background-image: url("../img/Aardbei.jpeg"); }
   .favorites__item--banana {
-    background-image: url("https://images.unsplash.com/photo-1558035579-a10d04acf787?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGJhbmFuYXxlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"); }
+    background-image: url("../img/Banaan.jpeg"); }
   .favorites__item--cherry {
-    background-image: url("https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODN8fGZydWl0fGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"); }
+    background-image: url("../img/Kers.jpeg"); }
   .favorites__item--mandarin {
-    background-image: url("https://images.unsplash.com/photo-1557800636-894a64c1696f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8b3JhbmdlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"); }
+    background-image: url("../img/Clementine.jpeg"); }
   .favorites__item--pineapple {
-    background-image: url("https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGluZWFwcGxlfGVufDB8MXwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"); }
+    background-image: url("../img/Ananas.jpeg"); }
   .favorites__item--peach {
-    background-image: url("https://images.unsplash.com/photo-1602813812581-0713dae489da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVhY2h8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"); }
+    background-image: url("../img/Perzik.jpeg"); }
 
 .footer {
   font-size: 1.6rem;
-  padding: 3.2rem 0 3.2rem 0;
+  padding: 3.2rem 0;
   color: white;
   background-color: black;
   text-align: center; }
 
 .sr-only {
   position: absolute;
-  top: -9999px;
-  left: -9999px;
   width: 1px;
-  height: 1px; }
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
 
-/* Validated with https://jigsaw.w3.org/css-validator/validator - no errors, but 4 warnings concerning elements that are not taken into account for the validation (the defined variables) */
+/* Validated with https://jigsaw.w3.org/css-validator/validator - no errors, but warnings concerning elements that are not taken into account for the validation (the defined variables) */
